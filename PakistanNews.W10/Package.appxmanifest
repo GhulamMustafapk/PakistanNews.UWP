@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+			<Identity Name="17934GhulamMustafa.MyCountryPakistan" Publisher="CN=5B97E375-049F-4830-B350-BD6B30CCDAEA" Version="30.30.30.0" />
+	    <mp:PhoneIdentity PhoneProductId="96997b9a-08d1-4690-8bfb-19a95ccecf07" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+    <Properties>
+        <DisplayName>Pakistan News Live</DisplayName>
+        <PublisherDisplayName>Ghulam Mustafa</PublisherDisplayName>
+        <Logo>Assets\StoreLogo.png</Logo>
+    </Properties>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    </Dependencies>
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+    <Applications>
+        <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PakistanNews.App">
+            <uap:VisualElements 
+			  DisplayName="Pakistan News"
+              Square150x150Logo="Assets\Square150x150Logo.png"
+              Square44x44Logo="Assets\Square44x44Logo.png"
+              Description="Pakistan News Live,  gives you easy access to read up to the minute news from the most popular/Leading news sources. Take this app with you and stay informed with access to the latest news."
+              BackgroundColor="transparent">
+                <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#154915"/>
+                <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+                    <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile10?config=hAIAAB~LCAAAAAAABACNUMlqwzAQ/ZUwZxMntFDQLUsphWw0KTmUHhR74ohIspGl2Cb43zuynCaXQtFFb7a3XGFe7poCgT1H9J3l~igyYFdYmxRNgM5wK3LtqxMp86prATtyWWIUBqcNMO2k7OFcGEzCzqiN4NNIYHCytmBxXFXV8HBIhkmuYmdSFwudYj2slQQa3aEqJLfoyXZC4oor~sOUJ~fM5E6nEMHUcJ0KTTKfSLMoaaHp5zb8LErL9WCFVTlYiAvS/BstFiWwryts3eEB7VFkJwtsPBp55tpuLfF0l6nwKlGhtmHUd70mSsRSkai2TiluGrq/N7wAZo2jNJZCL4TG8hbHktc9pnyJ3Ur8TW5rG4~IaiJFplV31~f1rniG4UIb3bjDvb5FTkxCIjro443gA1V~wSU3mdA3NTOTFx3B~oKGUqLEXiLYSJ5gYBu3d4JHcxNnT7n59dYL/tvc~G4uMP/L23f32h/9P/LFhAIAAA=="/>
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="square150x150Logo"/>
+						<uap:ShowOn Tile="square310x310Logo" />
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+            </uap:VisualElements>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+</Package>

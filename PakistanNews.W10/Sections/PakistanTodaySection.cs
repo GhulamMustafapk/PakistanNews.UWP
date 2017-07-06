@@ -14,11 +14,11 @@ using PakistanNews.ViewModels;
 
 namespace PakistanNews.Sections
 {
-    public class DAWNNewsSection : Section<RssSchema>
+    public class PakistanTodaySection : Section<RssSchema>
     {
 		private RssDataProvider _dataProvider;
 
-		public DAWNNewsSection()
+		public PakistanTodaySection()
 		{
 			_dataProvider = new RssDataProvider();
 		}
@@ -27,7 +27,7 @@ namespace PakistanNews.Sections
         {
             var config = new RssDataConfig
             {
-                Url = new Uri("http://feeds.feedburner.com/dawn-news"),
+                Url = new Uri("http://www.pakistantoday.com.pk/feed/"),
 				OrderBy = "PublishDate",
 				OrderDirection = SortDirection.Descending
             };
@@ -53,9 +53,9 @@ namespace PakistanNews.Sections
             {
                 return new ListPageConfig<RssSchema>
                 {
-                    Title = "DAWN News",
+                    Title = "Pakistan Today",
 
-                    Page = typeof(Pages.DAWNNewsListPage),
+                    Page = typeof(Pages.PakistanTodayListPage),
 
                     LayoutBindings = (viewModel, item) =>
                     {
@@ -65,7 +65,7 @@ namespace PakistanNews.Sections
                     },
                     DetailNavigation = (item) =>
                     {
-						return NavInfo.FromPage<Pages.DAWNNewsDetailPage>(true);
+						return NavInfo.FromPage<Pages.PakistanTodayDetailPage>(true);
                     }
                 };
             }
@@ -81,18 +81,19 @@ namespace PakistanNews.Sections
                     viewModel.PageTitle = item.Author.ToSafeString();
                     viewModel.Title = item.Title.ToSafeString();
                     viewModel.Description = item.Content.ToSafeString();
-                    viewModel.ImageUrl = ItemViewModel.LoadSafeUrl("");
+                    viewModel.ImageUrl = ItemViewModel.LoadSafeUrl(item.ImageUrl.ToSafeString());
                     viewModel.Content = null;
 					viewModel.Source = item.FeedUrl;
                 });
 
                 var actions = new List<ActionConfig<RssSchema>>
                 {
+                    ActionConfig<RssSchema>.Link("Go To Source", (item) => item.FeedUrl.ToSafeString()),
                 };
 
                 return new DetailPageConfig<RssSchema>
                 {
-                    Title = "DAWN News",
+                    Title = "Pakistan Today",
                     LayoutBindings = bindings,
                     Actions = actions
                 };

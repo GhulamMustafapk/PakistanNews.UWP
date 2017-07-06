@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.ApplicationModel.DataTransfer;
@@ -13,9 +15,13 @@ using Windows.Storage;
 using AppStudio.Uwp;
 using AppStudio.DataProviders;
 using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Cache;
 using AppStudio.Uwp.Commands;
+using AppStudio.Uwp.DataSync;
+using AppStudio.Uwp.Navigation;
 
 using PakistanNews.Sections;
+using PakistanNews.Services;
 using PakistanNews.Navigation;
 using PakistanNews.Pages;
 

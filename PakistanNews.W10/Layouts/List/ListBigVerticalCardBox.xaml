@@ -25,7 +25,7 @@
             ItemClickCommand="{Binding ItemClickCommand, ElementName=root}"
             OneRowModeEnabled="{Binding OneRowModeEnabled, ElementName=root}"
             DesiredWidth="{Binding Active.itemsDesiredWidth, ElementName=vbp}"
-            was_commands:EndOfScrollCommand.Command="{Binding EndOfScrollCommand, ElementName=root}">
+            was_commands:EndOfScrollCommand.Command="{Binding EndOfScrollCommand, ElementName=root}" FontSize="12">
             <was_controls:ResponsiveGridView.ItemTemplate>
                 <DataTemplate x:DataType="vm:ItemViewModel">
                     <Grid
@@ -59,7 +59,7 @@
                                     RelativePanel.AlignTopWithPanel="True"
                                     MaxLines="{Binding Active.titleMaxLines, ElementName=vbp}"
                                     FontSize="{Binding Active.titleFontSize, ElementName=vbp}"
-                                    Margin="{Binding Active.leftMarginTitleBox, ElementName=vbp}"/>
+                                    Margin="{Binding Active.leftMarginTitleBox, ElementName=vbp}" Canvas.ZIndex="0"/>
                                 <TextBlock
                                     x:Phase="1"
                                     RelativePanel.Below="title"

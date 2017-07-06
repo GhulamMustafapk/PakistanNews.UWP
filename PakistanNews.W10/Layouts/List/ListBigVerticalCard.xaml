@@ -25,7 +25,7 @@
             ItemClickCommand="{Binding ItemClickCommand, ElementName=root}"
             OneRowModeEnabled="{Binding OneRowModeEnabled, ElementName=root}"
             DesiredWidth="{Binding Active.itemsDesiredWidth, ElementName=vbp}"
-            was_commands:EndOfScrollCommand.Command="{Binding EndOfScrollCommand, ElementName=root}">
+            was_commands:EndOfScrollCommand.Command="{Binding EndOfScrollCommand, ElementName=root}" FontSize="12">
             <was_controls:ResponsiveGridView.ItemTemplate>
                 <DataTemplate x:DataType="vm:ItemViewModel">
                     <Grid Height="{Binding Active.itemsHeight, ElementName=vbp}">

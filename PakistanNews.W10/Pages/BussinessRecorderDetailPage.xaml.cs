@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// <copyright file="BBCUrduDetailPage.xaml.cs" company="Microsoft">
+// <copyright file="BussinessRecorderDetailPage.xaml.cs" company="Microsoft">
 //    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
 // </copyright>
 //
@@ -20,13 +20,13 @@ using AppStudio.Uwp;
 
 namespace PakistanNews.Pages
 {
-    public sealed partial class BBCUrduDetailPage : Page
+    public sealed partial class BussinessRecorderDetailPage : Page
     {
         private DataTransferManager _dataTransferManager;
 
-        public BBCUrduDetailPage()
+        public BussinessRecorderDetailPage()
         {
-            ViewModel = ViewModelFactory.NewDetail(new BBCUrduSection());
+            ViewModel = ViewModelFactory.NewDetail(new BussinessRecorderSection());
             this.InitializeComponent();
 			commandBar.DataContext = ViewModel;
             Microsoft.HockeyApp.HockeyClient.Current.TrackEvent(this.GetType().FullName);

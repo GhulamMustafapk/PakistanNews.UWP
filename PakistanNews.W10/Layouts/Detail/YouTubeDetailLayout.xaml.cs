@@ -1,5 +1,9 @@
+using System;
+using Windows.Devices.Input;
+using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using PakistanNews.Services;
 
 namespace PakistanNews.Layouts.Detail
 {

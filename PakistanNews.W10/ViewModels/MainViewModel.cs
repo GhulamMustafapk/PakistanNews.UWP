@@ -1,9 +1,18 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using System.Windows.Input;
+using AppStudio.Uwp;
 using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Navigation;
 using AppStudio.Uwp.Commands;
+using AppStudio.DataProviders;
+
+using AppStudio.DataProviders.Rss;
+using AppStudio.DataProviders.LocalStorage;
 using PakistanNews.Sections;
 
 
@@ -16,6 +25,9 @@ namespace PakistanNews.ViewModels
         public ListViewModel BBCUrdu { get; private set; }
         public ListViewModel VoiceOfAmerica { get; private set; }
         public ListViewModel DunyaNews { get; private set; }
+        public ListViewModel ExpressTribune { get; private set; }
+        public ListViewModel PakistanToday { get; private set; }
+        public ListViewModel BussinessRecorder { get; private set; }
 
         public MainViewModel(int visibleItems) : base()
         {
@@ -25,6 +37,9 @@ namespace PakistanNews.ViewModels
             BBCUrdu = ViewModelFactory.NewList(new BBCUrduSection(), visibleItems);
             VoiceOfAmerica = ViewModelFactory.NewList(new VoiceOfAmericaSection(), visibleItems);
             DunyaNews = ViewModelFactory.NewList(new DunyaNewsSection(), visibleItems);
+            ExpressTribune = ViewModelFactory.NewList(new ExpressTribuneSection(), visibleItems);
+            PakistanToday = ViewModelFactory.NewList(new PakistanTodaySection(), visibleItems);
+            BussinessRecorder = ViewModelFactory.NewList(new BussinessRecorderSection(), visibleItems);
 
             if (GetViewModels().Any(vm => !vm.HasLocalData))
             {
@@ -72,6 +87,9 @@ namespace PakistanNews.ViewModels
             yield return BBCUrdu;
             yield return VoiceOfAmerica;
             yield return DunyaNews;
+            yield return ExpressTribune;
+            yield return PakistanToday;
+            yield return BussinessRecorder;
         }
     }
 }

@@ -4,7 +4,7 @@
 //    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
 // </copyright>
 //
-// <createdOn>6/13/2017 7:49:10 AM</createdOn>
+// <createdOn>7/6/2017 5:33:38 AM</createdOn>
 //
 //---------------------------------------------------------------------------
 
@@ -13,6 +13,8 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml;
+
+using AppStudio.Uwp;
 using AppStudio.Uwp.Commands;
 using AppStudio.Uwp.Navigation;
 

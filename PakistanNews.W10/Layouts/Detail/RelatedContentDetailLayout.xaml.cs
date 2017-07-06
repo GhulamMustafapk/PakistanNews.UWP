@@ -1,3 +1,5 @@
+using AppStudio.Uwp.Controls;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 
 namespace PakistanNews.Layouts.Detail

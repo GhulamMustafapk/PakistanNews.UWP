@@ -135,8 +135,8 @@
             HamburgerForeground="{StaticResource NavigationPaneButtonForeground}"
             NavigationItemTemplate="{StaticResource NavigationItemTemplate}"
             NavigationSubItemTemplate="{StaticResource NavigationItemTemplate}"
-            ListViewItemContainerStyle="{StaticResource ListViewItemContainerStyle}">
-            <Frame x:Name="frame" />
+            ListViewItemContainerStyle="{StaticResource ListViewItemContainerStyle}" Opacity="0.8">
+            <Frame x:Name="frame" Opacity="0.8" />
         </controls:ShellControl>
 	</Grid>
 </Page>

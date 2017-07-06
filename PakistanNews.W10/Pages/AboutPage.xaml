@@ -7,30 +7,45 @@
     xmlns:was_controls="using:AppStudio.Uwp.Controls"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
-    <Grid Background="{StaticResource AppBackground}">
+    <Grid Background="{StaticResource AppBackground}" Opacity="0.8">
         <ScrollViewer FontSize="12" Opacity="0.8">
             <StackPanel Margin="24,32,24,8" Opacity="0.8">
                 <TextBlock
                     Text="{x:Bind AboutThisAppModel.AppName}"
                     FontWeight="Light"
                     FontSize="12"
-                    Style="{StaticResource AppDescriptionsStyle}"/>
+                    Style="{StaticResource AppDescriptionsStyle}" Margin="0"/>
                 <TextBlock
                     Style="{StaticResource AppDescriptionsStyle}" Margin="0">
                     <Run x:Uid="AppVersion"/>
                     <Run Text="{x:Bind AboutThisAppModel.AppVersion}"/>
                 </TextBlock>
                 <TextBlock
-                    Margin="0"
+                    Margin="0,0,-2,10"
                     Style="{StaticResource AppDescriptionsStyle}">
                     <Run x:Uid="DevelopedBy"/>
                     <Run Text="{x:Bind AboutThisAppModel.Publisher}"/>
                 </TextBlock>
                 <TextBlock
-                    Margin="0"
+                    Margin="0,0,0,10"
                     Text="{x:Bind AboutThisAppModel.AboutText}"
                     Style="{StaticResource AppDescriptionsStyle}"/>
-				 </StackPanel>
+                <TextBlock HorizontalAlignment="Stretch" Width="auto"
+           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White">
+                    <Run Text="The application is provided as is "/>
+                    <Run Text="without "/>
+                    <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
+                </TextBlock>
+                <TextBlock FontWeight="Bold" Margin="0,5,0,0">My Other Apps</TextBlock>
+                <HyperlinkButton Content="Tech Trends" NavigateUri="https://www.microsoft.com/store/apps/9nblggh6j0jl" Padding="0" FontSize="12" AutomationProperties.HelpText="Tech Trends" Width="auto" ToolTipService.ToolTip="Tech Trends by Ghulam Mustafa">
+                    <HyperlinkButton.ContentTransitions>
+                        <TransitionCollection>
+                            <EdgeUIThemeTransition Edge="Right"/>
+                        </TransitionCollection>
+                    </HyperlinkButton.ContentTransitions>
+                </HyperlinkButton>
+            </StackPanel>
+            
         </ScrollViewer>
-    </Grid>    
+     </Grid>    
 </Page>

@@ -4,17 +4,20 @@
 //    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
 // </copyright>
 //
-// <createdOn>6/13/2017 7:49:10 AM</createdOn>
+// <createdOn>7/6/2017 5:33:38 AM</createdOn>
 //
 //---------------------------------------------------------------------------
 
 using System;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Store;
 using Windows.Storage;
 using Windows.UI.Notifications;
 
 using AppStudio.Uwp;
 using AppStudio.Uwp.Controls;
+
+using PakistanNews.Services;
 
 namespace PakistanNews
 {

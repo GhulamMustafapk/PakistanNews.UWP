@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using AppStudio.Uwp;
 using AppStudio.Uwp.Commands;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using PakistanNews.Sections;
@@ -16,6 +19,9 @@ namespace PakistanNews.ViewModels
             BBCUrdu = ViewModelFactory.NewList(new BBCUrduSection());
             VoiceOfAmerica = ViewModelFactory.NewList(new VoiceOfAmericaSection());
             DunyaNews = ViewModelFactory.NewList(new DunyaNewsSection());
+            ExpressTribune = ViewModelFactory.NewList(new ExpressTribuneSection());
+            PakistanToday = ViewModelFactory.NewList(new PakistanTodaySection());
+            BussinessRecorder = ViewModelFactory.NewList(new BussinessRecorderSection());
                         
         }
 
@@ -50,6 +56,9 @@ namespace PakistanNews.ViewModels
         public ListViewModel BBCUrdu { get; private set; }
         public ListViewModel VoiceOfAmerica { get; private set; }
         public ListViewModel DunyaNews { get; private set; }
+        public ListViewModel ExpressTribune { get; private set; }
+        public ListViewModel PakistanToday { get; private set; }
+        public ListViewModel BussinessRecorder { get; private set; }
         public async Task SearchDataAsync(string text)
         {
             this.HasItems = true;
@@ -68,6 +77,9 @@ namespace PakistanNews.ViewModels
             yield return BBCUrdu;
             yield return VoiceOfAmerica;
             yield return DunyaNews;
+            yield return ExpressTribune;
+            yield return PakistanToday;
+            yield return BussinessRecorder;
         }
 		private void CleanItems()
         {

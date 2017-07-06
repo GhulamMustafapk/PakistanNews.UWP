@@ -7,46 +7,100 @@
     xmlns:was_controls="using:AppStudio.Uwp.Controls"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
-    <Grid Background="{StaticResource NavigationPaneBackground}">
-        <ScrollViewer Background="{x:Null}" FontSize="10" Opacity="0.8" ViewChanged="ScrollViewer_ViewChanged">
-            <StackPanel Margin="20,9,20,10">
-                <StackPanel.ChildrenTransitions>
-                    <TransitionCollection>
-                        <NavigationThemeTransition/>
-                    </TransitionCollection>
-                </StackPanel.ChildrenTransitions>
+    <Grid Background="{StaticResource AppBackground}">
+        <ScrollViewer>
+            <StackPanel Margin="24,32,24,8">
                 <TextBlock
                     Text="{x:Bind AboutThisAppModel.AppName}"
-                    FontWeight="Bold"
-                    FontSize="12"
-                    Style="{StaticResource AppDescriptionsStyle}" Margin="-2,0,0,0" AutomationProperties.HelpText="About this Application"/>
+                    FontWeight="Light"
+                    FontSize="26"
+                    Style="{StaticResource AppDescriptionsStyle}"/>
                 <TextBlock
-                    Margin="0"
-                    Style="{StaticResource AppDescriptionsStyle}" FontSize="12" Height="13">
+                    Style="{StaticResource AppDescriptionsStyle}">
+                    <Run x:Uid="AppVersion"/>
+                    <Run Text="{x:Bind AboutThisAppModel.AppVersion}"/>
+                </TextBlock>
+                <Viewbox
+                    Margin="0,12,0,0"
+                    HorizontalAlignment="Left"
+                    StretchDirection="DownOnly">
+                    <Border
+                        BorderThickness="1"
+                        BorderBrush="{StaticResource DescriptionForeground}">
+                        <Border.Background>
+                            <SolidColorBrush
+                                Opacity="0.5"
+                                Color="{StaticResource DescriptionForegroundColor}"/>
+                        </Border.Background>
+                        <Image Source="{x:Bind AboutThisAppModel.AppLogo}"/>
+                    </Border>
+                </Viewbox>
+                <TextBlock
+                    Margin="0,12,0,0"
+                    Style="{StaticResource AppDescriptionsStyle}">
                     <Run x:Uid="DevelopedBy"/>
                     <Run Text="{x:Bind AboutThisAppModel.Publisher}"/>
                 </TextBlock>
                 <TextBlock
-                    Style="{StaticResource AppDescriptionsStyle}" FontSize="12">
-                    <Run x:Uid="AppVersion"/>
-                    <Run Text="{x:Bind AboutThisAppModel.AppVersion}"/>
-                </TextBlock>
-                <TextBlock HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" ToolTipService.ToolTip="Disclaimer" Foreground="#FFF00000" Margin="-3,20,0,0"> Disclaimer</TextBlock>
-                <TextBlock Text="By using this application you agree to the following:" Width="auto"
-           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light"/>
-                <TextBlock HorizontalAlignment="Stretch" Width="auto"
-           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White">
-                    <Run Text="The application is provided as is "/>
-                    <Run Text="without "/>
-                    <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
-                     </TextBlock>
-                <TextBlock Width="123" HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" Margin="0,30,0,0"> My other apps</TextBlock>
-                <HyperlinkButton Content="Tech Trends" NavigateUri="https://www.microsoft.com/store/apps/9nblggh6j0jl" Padding="0" FontSize="12" AutomationProperties.HelpText="Tech Trends"/>
-                <Viewbox
-                    Margin="0,12,0,0"
-                    HorizontalAlignment="Left"
-                    StretchDirection="DownOnly" d:IsHidden="True"/>
-            </StackPanel>
+                    Margin="0,25,0,0"
+                    Text="{x:Bind AboutThisAppModel.AboutText}"
+                    Style="{StaticResource AppDescriptionsStyle}"/>
+                <HyperlinkButton
+                    x:Uid="PrivacyTermsButton"
+                    NavigateUri="{x:Bind AboutThisAppModel.Privacy}"
+                    Style="{StaticResource HyperlinkStyle}"/>
+				<HyperlinkButton                    
+                        x:Uid="AboutViewMoreInformation"
+                        Style="{StaticResource HyperlinkStyle}"
+                        Visibility="{x:Bind AboutThisAppModel.IsMoreInfoVisible, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=true}"
+                        Command="{x:Bind AboutThisAppModel.ViewMoreInfoCommand, Mode=OneWay}"/>
+                <StackPanel
+                    Visibility="{x:Bind AboutThisAppModel.IsMoreInfoVisible, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+					<TextBlock
+						x:Uid="AboutSectionLicenses"
+						Margin="0,25,0,0"
+						FontWeight="Bold"
+						Style="{StaticResource AppDescriptionsStyle}"/>
+					<HyperlinkButton                    
+						x:Uid="AboutAppStudioOpenSourceLibraries"                    
+						NavigateUri="{x:Bind AboutThisAppModel.WasLibs}"
+						Style="{StaticResource HyperlinkStyle}"/>
+					<HyperlinkButton
+						Content="Newtonsoft JSON"
+						NavigateUri="{x:Bind AboutThisAppModel.NewtonsoftWeb}"
+						Style="{StaticResource HyperlinkStyle}"/>
+					<TextBlock
+						x:Uid="AboutSectionCapabilities"
+						Margin="0,25,0,0"
+						FontWeight="Bold"
+						Style="{StaticResource AppDescriptionsStyle}"/>
+					<TextBlock
+						x:Uid="AboutCapabilityInternet"
+						Margin="0,12,0,0"
+						Style="{StaticResource AppDescriptionsStyle}"/>
+					<TextBlock
+						x:Uid="AboutCapabilityApplicationInsights"
+						Margin="0,12,0,0"
+						Style="{StaticResource AppDescriptionsStyle}"/>
+					<TextBlock
+						x:Uid="AboutCapabilityTileUpdater"
+						Margin="0,12,0,0"
+						Style="{StaticResource AppDescriptionsStyle}"/>
+					<StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+						<TextBlock
+							x:Uid="AboutPoweredBy"
+							FontSize="14"
+							VerticalAlignment="Center"
+							Style="{StaticResource AppDescriptionsStyle}" />
+						<HyperlinkButton
+							Margin="6,0,0,0"
+							Content="Windows App Studio"
+							VerticalAlignment="Center"
+							NavigateUri="{x:Bind AboutThisAppModel.WindowsAppStudioWeb}"
+							Style="{StaticResource HyperlinkStyle}"/>
+					</StackPanel>
+				</StackPanel>
+			</StackPanel>
         </ScrollViewer>
-    </Grid>
+    </Grid>    
 </Page>

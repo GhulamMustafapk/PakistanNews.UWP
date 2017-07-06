@@ -1,9 +1,20 @@
+//---------------------------------------------------------------------------
+//
+// <copyright file="App.xaml.cs" company="Microsoft">
+//    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
+// </copyright>
+//
+// <createdOn>7/6/2017 5:33:38 AM</createdOn>
+//
+//---------------------------------------------------------------------------
+
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+
 using PakistanNews.Pages;
 
 namespace PakistanNews
@@ -13,7 +24,7 @@ namespace PakistanNews
     /// </summary>
     sealed partial class App : Application
     {
-       /// <summary>
+        /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
@@ -32,7 +43,6 @@ namespace PakistanNews
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
-
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -72,8 +82,7 @@ namespace PakistanNews
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-         }
-
+        }
 
 
         /// <summary>

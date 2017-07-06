@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// <copyright file="VoiceOfAmericaListPage.xaml.cs" company="Microsoft">
+// <copyright file="PakistanTodayListPage.xaml.cs" company="Microsoft">
 //    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
 // </copyright>
 //
@@ -18,12 +18,12 @@ using AppStudio.Uwp;
 
 namespace PakistanNews.Pages
 {
-    public sealed partial class VoiceOfAmericaListPage : Page
+    public sealed partial class PakistanTodayListPage : Page
     {
 	    public ListViewModel ViewModel { get; set; }
-        public VoiceOfAmericaListPage()
+        public PakistanTodayListPage()
         {
-			ViewModel = ViewModelFactory.NewList(new VoiceOfAmericaSection());
+			ViewModel = ViewModelFactory.NewList(new PakistanTodaySection());
 
             this.InitializeComponent();
 			commandBar.DataContext = ViewModel;
@@ -33,7 +33,7 @@ namespace PakistanNews.Pages
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-			ShellPage.Current.ShellControl.SelectItem("d11ec815-b211-476e-9a30-cd685f99e4ba");
+			ShellPage.Current.ShellControl.SelectItem("a1d872c7-34a7-4f74-a3be-779ec386a9ff");
 			ShellPage.Current.ShellControl.SetCommandBar(commandBar);
 			if (e.NavigationMode == NavigationMode.New)
             {			

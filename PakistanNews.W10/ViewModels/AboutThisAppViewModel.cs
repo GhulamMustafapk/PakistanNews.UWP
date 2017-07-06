@@ -1,7 +1,9 @@
 using System;
 using System.Windows.Input;
+
 using Windows.ApplicationModel;
 using Windows.UI.Xaml.Media.Imaging;
+
 using AppStudio.Uwp;
 using AppStudio.Uwp.Commands;
 

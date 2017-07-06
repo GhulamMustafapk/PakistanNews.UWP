@@ -1,8 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.NetworkInformation;
+using System.Threading.Tasks;
+using AppStudio.DataProviders;
 using AppStudio.DataProviders.Core;
 using AppStudio.Uwp;
 using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Cache;
 using Windows.ApplicationModel.DataTransfer;
 
 namespace PakistanNews.ViewModels

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using Windows.Foundation;
@@ -132,6 +133,24 @@ namespace PakistanNews.Pages
                 " Dunya News",                
                 AppNavigation.ActionFromPage("DunyaNewsListPage"),
 				null, new Image() { Source = new BitmapImage(new Uri("ms-appx:///Assets/DataImages/unnamed.png")) }));
+
+            NavigationItems.Add(AppNavigation.NodeFromAction(
+				"5396767e-72a3-4847-b538-b9ea3a5a38ec",
+                "Express Tribune",                
+                AppNavigation.ActionFromPage("ExpressTribuneListPage"),
+				AppNavigation.IconFromGlyph("\ue12a")));
+
+            NavigationItems.Add(AppNavigation.NodeFromAction(
+				"a1d872c7-34a7-4f74-a3be-779ec386a9ff",
+                "Pakistan Today",                
+                AppNavigation.ActionFromPage("PakistanTodayListPage"),
+				AppNavigation.IconFromGlyph("\ue12a")));
+
+            NavigationItems.Add(AppNavigation.NodeFromAction(
+				"817f4f95-eb36-42c3-9468-e2f2b8643b78",
+                "Bussiness Recorder",                
+                AppNavigation.ActionFromPage("BussinessRecorderListPage"),
+				AppNavigation.IconFromGlyph("\ue12a")));
 
             NavigationItems.Add(NavigationItem.Separator);
 

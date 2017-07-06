@@ -1,9 +1,11 @@
 using AppStudio.Uwp;
 using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Converters;
 using AppStudio.Uwp.DataSync;
 using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel.Resources;
+using Windows.UI.Xaml.Media.Imaging;
 
 using PakistanNews.Navigation;
 

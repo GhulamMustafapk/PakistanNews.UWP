@@ -14,11 +14,11 @@ using PakistanNews.ViewModels;
 
 namespace PakistanNews.Sections
 {
-    public class DAWNNewsSection : Section<RssSchema>
+    public class ExpressTribuneSection : Section<RssSchema>
     {
 		private RssDataProvider _dataProvider;
 
-		public DAWNNewsSection()
+		public ExpressTribuneSection()
 		{
 			_dataProvider = new RssDataProvider();
 		}
@@ -27,7 +27,7 @@ namespace PakistanNews.Sections
         {
             var config = new RssDataConfig
             {
-                Url = new Uri("http://feeds.feedburner.com/dawn-news"),
+                Url = new Uri("https://tribune.com.pk/pakistan/feed/"),
 				OrderBy = "PublishDate",
 				OrderDirection = SortDirection.Descending
             };
@@ -53,9 +53,9 @@ namespace PakistanNews.Sections
             {
                 return new ListPageConfig<RssSchema>
                 {
-                    Title = "DAWN News",
+                    Title = "Express Tribune",
 
-                    Page = typeof(Pages.DAWNNewsListPage),
+                    Page = typeof(Pages.ExpressTribuneListPage),
 
                     LayoutBindings = (viewModel, item) =>
                     {
@@ -65,7 +65,7 @@ namespace PakistanNews.Sections
                     },
                     DetailNavigation = (item) =>
                     {
-						return NavInfo.FromPage<Pages.DAWNNewsDetailPage>(true);
+						return NavInfo.FromPage<Pages.ExpressTribuneDetailPage>(true);
                     }
                 };
             }
@@ -88,11 +88,12 @@ namespace PakistanNews.Sections
 
                 var actions = new List<ActionConfig<RssSchema>>
                 {
+                    ActionConfig<RssSchema>.Link("Go To Source", (item) => item.FeedUrl.ToSafeString()),
                 };
 
                 return new DetailPageConfig<RssSchema>
                 {
-                    Title = "DAWN News",
+                    Title = "Express Tribune",
                     LayoutBindings = bindings,
                     Actions = actions
                 };

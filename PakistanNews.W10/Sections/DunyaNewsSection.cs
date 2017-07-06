@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using AppStudio.DataProviders;
 using AppStudio.DataProviders.Core;
 using AppStudio.DataProviders.Rss;
+using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Commands;
+using AppStudio.Uwp;
+using System.Linq;
 
 using PakistanNews.Navigation;
 using PakistanNews.ViewModels;
@@ -45,7 +49,7 @@ namespace PakistanNews.Sections
 
         public override ListPageConfig<RssSchema> ListPage
         {
-            get
+            get 
             {
                 return new ListPageConfig<RssSchema>
                 {
@@ -55,20 +59,20 @@ namespace PakistanNews.Sections
 
                     LayoutBindings = (viewModel, item) =>
                     {
-                        viewModel.Header = item.PublishDate.ToString(DateTimeFormat.FullLongDate);
+						viewModel.Header = item.PublishDate.ToString(DateTimeFormat.FullLongDate);
                         viewModel.Title = item.Title.ToSafeString();
                         viewModel.SubTitle = item.Summary.ToSafeString();
                         viewModel.ImageUrl = ItemViewModel.LoadSafeUrl(item.ImageUrl.ToSafeString());
-                        viewModel.Footer = item.Author.ToSafeString();
+						viewModel.Footer = item.Author.ToSafeString();
 
-                        viewModel.GroupBy = item.PublishDate.SafeType().Date;
+						viewModel.GroupBy = item.PublishDate.SafeType().Date;
 
-                        viewModel.OrderBy = item.PublishDate;
+						viewModel.OrderBy = item.PublishDate;
                     },
-                    OrderType = OrderType.Ascending,
+					OrderType = OrderType.Ascending,
                     DetailNavigation = (item) =>
                     {
-                        return NavInfo.FromPage<Pages.DunyaNewsDetailPage>(true);
+						return NavInfo.FromPage<Pages.DunyaNewsDetailPage>(true);
                     }
                 };
             }
@@ -78,9 +82,7 @@ namespace PakistanNews.Sections
         {
             get
             {
-#pragma warning disable IDE0028 // Simplify collection initialization
                 var bindings = new List<Action<ItemViewModel, RssSchema>>();
-#pragma warning restore IDE0028 // Simplify collection initialization
                 bindings.Add((viewModel, item) =>
                 {
                     viewModel.PageTitle = "Dunya News";

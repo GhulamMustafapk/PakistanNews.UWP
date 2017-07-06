@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using Windows.Data.Xml.Dom;
+using Windows.Storage;
+using Windows.UI.Notifications;
 
 using AppStudio.DataProviders;
 using AppStudio.Uwp.Cache;

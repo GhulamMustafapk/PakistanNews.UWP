@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Diagnostics;
+using System.Windows.Input;
 using AppStudio.Uwp.Actions;
+using AppStudio.Uwp.Cache;
 using AppStudio.Uwp.Commands;
 using AppStudio.Uwp.DataSync;
 using AppStudio.DataProviders;
 using AppStudio.Uwp.Navigation;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Xaml.Controls;
+
+using PakistanNews.Navigation;
 using PakistanNews.Sections;
 using PakistanNews.Services;
 

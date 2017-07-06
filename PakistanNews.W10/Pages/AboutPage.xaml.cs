@@ -1,9 +1,18 @@
+//---------------------------------------------------------------------------
+//
+// <copyright file="AboutPage.xaml.cs" company="Microsoft">
+//    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
+// </copyright>
+//
+// <createdOn>7/6/2017 5:33:38 AM</createdOn>
+//
+//---------------------------------------------------------------------------
+
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using PakistanNews.ViewModels;
 
 namespace PakistanNews.Pages
-    
 {
     public sealed partial class AboutPage : Page
     {
@@ -22,11 +31,5 @@ namespace PakistanNews.Pages
             ShellPage.Current.ShellControl.SelectItem("About");
             base.OnNavigatedTo(e);
         }
-
-        private void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
-        {
-
-        }
     }
-
 }

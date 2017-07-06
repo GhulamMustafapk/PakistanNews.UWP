@@ -15,8 +15,6 @@
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     d:DataContext="{d:DesignData Source=/Assets/Design/DetailDesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}"
     mc:Ignorable="d">
-
-
 	<was_controls:ShellControl.CommandBar>
         <was_actions:ActionsCommandBar
             x:Name="commandBar"

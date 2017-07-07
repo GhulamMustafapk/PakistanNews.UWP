@@ -8,7 +8,7 @@
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
     <Grid Background="{StaticResource AppBackground}" Opacity="0.8">
-        <ScrollViewer FontSize="12" Opacity="0.8">
+        <ScrollViewer FontSize="12" Opacity="0.8" VerticalScrollMode="Disabled">
             <StackPanel Margin="24,32,24,8" Opacity="0.8">
                 <TextBlock
                     Text="{x:Bind AboutThisAppModel.AppName}"
@@ -31,7 +31,7 @@
                     Text="{x:Bind AboutThisAppModel.AboutText}"
                     Style="{StaticResource AppDescriptionsStyle}"/>
                 <TextBlock HorizontalAlignment="Stretch" Width="auto"
-           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White">
+           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                     <Run Text="The application is provided as is "/>
                     <Run Text="without "/>
                     <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
@@ -45,7 +45,6 @@
                     </HyperlinkButton.ContentTransitions>
                 </HyperlinkButton>
             </StackPanel>
-            
-        </ScrollViewer>
+         </ScrollViewer>
      </Grid>    
 </Page>

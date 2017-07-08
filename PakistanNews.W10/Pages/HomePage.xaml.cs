@@ -20,6 +20,10 @@ using AppStudio.Uwp.Navigation;
 
 using PakistanNews.ViewModels;
 
+
+
+
+
 namespace PakistanNews.Pages
 {
     public sealed partial class HomePage : Page
@@ -60,7 +64,9 @@ namespace PakistanNews.Pages
                     NavigationService.NavigateToPage("SearchPage", text, true);
                 },
                 SearchViewModel.CanSearch);
+                
             }
         }
+        
     }
 }

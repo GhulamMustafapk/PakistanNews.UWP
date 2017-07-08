@@ -11,6 +11,7 @@
     xmlns:controls="using:PakistanNews.Layouts.Controls"
     xmlns:triggers="using:PakistanNews.Triggers"	
     xmlns:vm="using:PakistanNews.ViewModels"
+    
     DataContext="{Binding ViewModel, RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
     <was_controls:ShellControl.CommandBar>
@@ -38,7 +39,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>        
+        </Grid.RowDefinitions>
         <was_controls:SectionList
 			x:Uid="SectionListItem"
 			ErrorColor="{StaticResource DescriptionForeground}"
@@ -46,7 +47,7 @@
 			LoadingTemplate="{StaticResource SectionListLoadingTemplate}"
 			TitleTemplate="{StaticResource SectionListTitleTemplate}"
 			HeaderLinkStyle="{StaticResource SectionListHeaderLinkStyle}">
-			<was_controls:SectionListItem
+            <was_controls:SectionListItem
                 DataContext="{Binding DAWNNews}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -57,8 +58,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding SAMAANews}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -69,8 +70,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding BBCUrdu}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -81,8 +82,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding VoiceOfAmerica}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -93,8 +94,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding DunyaNews}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -105,8 +106,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding ExpressTribune}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -117,8 +118,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding PakistanToday}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -129,8 +130,8 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
-			<was_controls:SectionListItem
+            </was_controls:SectionListItem>
+            <was_controls:SectionListItem
                 DataContext="{Binding BussinessRecorder}"
                 HeaderLinkClickCommand="{Binding SectionHeaderClickCommand}" 
                 HeaderLinkVisibility="Visible"
@@ -141,7 +142,7 @@
                 <DataTemplate>
                     <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="True" Margin="19,0,12,24"/>
                 </DataTemplate>
-			</was_controls:SectionListItem>
+            </was_controls:SectionListItem>
         </was_controls:SectionList>
         <controls:DataUpdateInformationControl
 			Grid.Row="1"
@@ -149,5 +150,6 @@
 			HorizontalAlignment="Left"
 			LastUpdateDateTime="{Binding LastUpdated}"
 			Color="{StaticResource DescriptionForeground}"/>
-    </Grid>
+            </Grid>
+
 </Page>

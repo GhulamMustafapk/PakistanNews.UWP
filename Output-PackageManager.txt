@@ -1,0 +1,25 @@
+﻿Restoring packages for D:\PakistanNews.Source-v30.30.30.0\PakistanNews.W10\PakistanNews.W10.csproj...
+  GET https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/index.json
+  GET https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/index.json
+  OK https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/index.json 663ms
+  OK https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/index.json 676ms
+  GET https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/1.5.3/windowsappstudio.uwp.1.5.3.nupkg
+  GET https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/1.5.1/windowsappstudio.dataproviders.1.5.1.nupkg
+  CACHE https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/index.json
+  CACHE https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/index.json
+  OK https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/1.5.1/windowsappstudio.dataproviders.1.5.1.nupkg 284ms
+  CACHE https://api.nuget.org/v3-flatcontainer/windowsappstudio.dataproviders/1.5.1/windowsappstudio.dataproviders.1.5.1.nupkg
+  OK https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/1.5.3/windowsappstudio.uwp.1.5.3.nupkg 628ms
+  CACHE https://api.nuget.org/v3-flatcontainer/windowsappstudio.uwp/1.5.3/windowsappstudio.uwp.1.5.3.nupkg
+Committing restore...
+Generating MSBuild file D:\PakistanNews.Source-v30.30.30.0\PakistanNews.W10\obj\PakistanNews.W10.csproj.nuget.g.targets.
+Writing lock file to disk. Path: D:\PakistanNews.Source-v30.30.30.0\PakistanNews.W10\obj\project.assets.json
+Restore completed in 6.08 sec for D:\PakistanNews.Source-v30.30.30.0\PakistanNews.W10\PakistanNews.W10.csproj.
+Successfully uninstalled 'Microsoft.Advertising.JS 10.1705.16001' from PakistanNews.W10
+Successfully uninstalled 'Microsoft.Advertising.XAML 10.1705.16001' from PakistanNews.W10
+Successfully uninstalled 'Microsoft.Services.Store.Engagement 10.1610.0' from PakistanNews.W10
+Successfully uninstalled 'Microsoft.Services.Store.SDK 10.1705.16001' from PakistanNews.W10
+Executing nuget actions took 2.76 sec
+Time Elapsed: 00:00:09.1088366
+========== Finished ==========
+

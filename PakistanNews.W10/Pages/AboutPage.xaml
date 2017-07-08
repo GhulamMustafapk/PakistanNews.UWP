@@ -36,7 +36,7 @@
                     <Run Text="without "/>
                     <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
                 </TextBlock>
-                <TextBlock FontWeight="Bold" Margin="0,5,0,0">My Other Apps</TextBlock>
+                <TextBlock FontWeight="Bold" Margin="0,5,0,0" TextWrapping="WrapWholeWords" FocusVisualPrimaryBrush="White">My Other Apps</TextBlock>
                 <HyperlinkButton Content="Tech Trends" NavigateUri="https://www.microsoft.com/store/apps/9nblggh6j0jl" Padding="0" FontSize="12" AutomationProperties.HelpText="Tech Trends" Width="auto" ToolTipService.ToolTip="Tech Trends by Ghulam Mustafa">
                     <HyperlinkButton.ContentTransitions>
                         <TransitionCollection>

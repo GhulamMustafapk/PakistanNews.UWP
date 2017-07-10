@@ -10,7 +10,8 @@
     xmlns:layouts="using:PakistanNews.Layouts.Detail"
 	xmlns:list_layouts="using:PakistanNews.Layouts.List"
     xmlns:controls="using:PakistanNews.Layouts.Controls"
-    xmlns:triggers="using:PakistanNews.Triggers"    
+    xmlns:triggers="using:PakistanNews.Triggers"  
+    
 	x:Name="root"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     d:DataContext="{d:DesignData Source=/Assets/Design/DetailDesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}"

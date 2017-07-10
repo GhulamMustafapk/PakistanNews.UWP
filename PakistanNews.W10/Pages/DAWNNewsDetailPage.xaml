@@ -62,7 +62,6 @@
     </was_controls:ShellControl.CommandBar>
     
     <Grid Background="{StaticResource AppBackground}">
-        <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}" />
-        <adduplex:AdControl AdUnitId="207167" AppKey="0c6cc2dc-99fa-4255-b0ce-8c183fc1de73" FontSize="12"                             VerticalAlignment="Bottom" Margin="30,0" Grid.Row="1" HorizontalAlignment="Center" Width="350" Height="50" />
-    </Grid>
+        <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}"/>
+        </Grid>
 </Page>

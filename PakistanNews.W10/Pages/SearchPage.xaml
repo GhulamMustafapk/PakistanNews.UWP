@@ -16,15 +16,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <was_controls:SearchBox
-            Margin="24,0"
+            Margin="24,0,0,0"
             x:Uid="SearchBox"
             DisplayMode="Visible"
-            SearchWidth="210"
             Foreground="{StaticResource DescriptionForeground}"
             Background="Transparent"
             SearchCommand="{Binding SearchCommand}"
-            HorizontalAlignment="Left"/>
-		<Grid
+            HorizontalAlignment="Left" Width="326" FontSize="12" SearchButtonSize="12"/>
+        <Grid
             Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -39,7 +38,7 @@
                     Text="{Binding SearchText}"                    
                     Style="{StaticResource AppDescriptionsStyle}"/>
             </StackPanel>
-			<TextBlock
+            <TextBlock
                 Grid.Row="1"
                 x:Uid="SearchNoResultsTxt"
                 Margin="24,12"
@@ -47,26 +46,25 @@
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
                 Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=True}"/>
-			<was_controls:SectionList
+            <was_controls:SectionList
 				Grid.Row="1" x:Uid="SectionListItem"
 				ErrorColor="{StaticResource DescriptionForeground}"
 				LoadingTemplateStaticHeight="3"
 				LoadingTemplate="{StaticResource SectionListLoadingTemplate}"
 				TitleTemplate="{StaticResource SectionListTitleTemplate}"
 				HeaderLinkStyle="{StaticResource SectionListHeaderLinkStyle}">
-				<was_controls:SectionListItem
+                <was_controls:SectionListItem
 					DataContext="{Binding DAWNNews}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
-					HeaderLinkVisibility="Collapsed"
 					Background="Transparent"
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding SAMAANews}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -74,11 +72,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding BBCUrdu}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -86,11 +84,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding VoiceOfAmerica}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -98,11 +96,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding DunyaNews}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -110,11 +108,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding ExpressTribune}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -122,11 +120,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding PakistanToday}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -134,11 +132,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-				<was_controls:SectionListItem
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+                <was_controls:SectionListItem
 					DataContext="{Binding BussinessRecorder}"
 					Visibility="{Binding HasItems, Converter={StaticResource BoolToVisibilityConverter}}"
 					HeaderLinkVisibility="Collapsed"
@@ -146,11 +144,11 @@
 					ErrorVisibility="{Binding HasLoadDataErrors, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					LoadingVisibility="{Binding IsBusy, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
 					d:DataContext="{d:DesignData Source=/Assets/Design/DesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}">
-					<DataTemplate>
-						<list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
-					</DataTemplate>
-				</was_controls:SectionListItem>
-			</was_controls:SectionList>
-		</Grid>
+                    <DataTemplate>
+                        <list_layouts:ListBigVerticalCardBox DataContext="{Binding}" ItemsSource="{Binding Items}" ItemClickCommand="{Binding ItemClickCommand}" OneRowModeEnabled="False" Margin="19,0,12,24"/>
+                    </DataTemplate>
+                </was_controls:SectionListItem>
+            </was_controls:SectionList>
+        </Grid>
     </Grid>
 </Page>

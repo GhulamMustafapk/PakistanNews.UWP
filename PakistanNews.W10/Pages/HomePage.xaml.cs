@@ -1,28 +1,11 @@
-//---------------------------------------------------------------------------
-//
-// <copyright file="HomePage.xaml.cs" company="Microsoft">
-//    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
-// </copyright>
-//
-// <createdOn>7/6/2017 5:33:38 AM</createdOn>
-//
-//---------------------------------------------------------------------------
-
 using System.Windows.Input;
-
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml;
-
 using AppStudio.Uwp;
 using AppStudio.Uwp.Commands;
 using AppStudio.Uwp.Navigation;
-
 using PakistanNews.ViewModels;
-
-
-
-
 
 namespace PakistanNews.Pages
 {
@@ -32,6 +15,7 @@ namespace PakistanNews.Pages
         {
             ViewModel = new MainViewModel(12);            
             InitializeComponent();
+            AdDuplex.AdDuplexClient.Initialize("41d29dec-906d-4859-9ad3-f81c71e4bdc3");
             NavigationCacheMode = NavigationCacheMode.Required;
 			commandBar.DataContext = ViewModel;
 			searchBox.SearchCommand = SearchCommand;

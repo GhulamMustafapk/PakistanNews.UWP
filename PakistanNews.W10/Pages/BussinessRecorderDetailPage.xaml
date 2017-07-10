@@ -1,5 +1,6 @@
 <Page
     x:Class="PakistanNews.Pages.BussinessRecorderDetailPage"
+    xmlns:adduplex="using:AdDuplex"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -62,5 +63,6 @@
     
     <Grid Background="{StaticResource AppBackground}">
         <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}" />
+        <adduplex:AdControl AdUnitId="207167" AppKey="0c6cc2dc-99fa-4255-b0ce-8c183fc1de73" FontSize="12"                             VerticalAlignment="Bottom" Margin="30,0" Grid.Row="1" HorizontalAlignment="Center" Width="350" Height="50" />
     </Grid>
 </Page>

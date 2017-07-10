@@ -11,15 +11,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="AppBarNextPage" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Sync"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     <Style x:Key="AppBarAbout" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
         <Setter Property="ContentTemplate">
             <Setter.Value>
@@ -29,16 +20,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="AppBarPrivacy" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="List"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarShare" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
+     <Style x:Key="AppBarShare" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
@@ -56,52 +38,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="AppBarPhone" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Phone"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarMail" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Mail"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarPlay" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Play"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarDirections" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Directions"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarAddress" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="Map"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="AppBarFontSizeSmall" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
+     <Style x:Key="AppBarFontSizeSmall" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
@@ -128,13 +65,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-	<Style x:Key="AppBarAddToCalendar" TargetType="AppBarButton" BasedOn="{StaticResource WasAppBarButtonStyle}">
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <SymbolIcon Symbol="CalendarReply"></SymbolIcon>
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-</ResourceDictionary>
+	</ResourceDictionary>

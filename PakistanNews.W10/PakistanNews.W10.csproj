@@ -600,6 +600,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AdDuplexWin10">
+      <Version>10.1.1.1</Version>
+    </PackageReference>
     <PackageReference Include="HockeySDK.UWP">
       <Version>4.0.0</Version>
     </PackageReference>

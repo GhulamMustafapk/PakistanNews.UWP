@@ -189,10 +189,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Layouts\Detail\YouTubeDetailLayout.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Layouts\Detail\RelatedContentDetailLayout.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -385,9 +381,6 @@
     </Compile>
     <Compile Include="Layouts\Detail\TextDetailLayout.xaml.cs">
       <DependentUpon>TextDetailLayout.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Layouts\Detail\YouTubeDetailLayout.xaml.cs">
-      <DependentUpon>YouTubeDetailLayout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Layouts\Detail\RelatedContentDetailLayout.xaml.cs">
       <DependentUpon>RelatedContentDetailLayout.xaml</DependentUpon>

@@ -15,6 +15,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
+
 using PakistanNews.Pages;
 
 namespace PakistanNews
@@ -44,7 +45,8 @@ namespace PakistanNews
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-           
+            AdDuplex.AdDuplexClient.Initialize("0c6cc2dc-99fa-4255-b0ce-8c183fc1de73");
+            
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {

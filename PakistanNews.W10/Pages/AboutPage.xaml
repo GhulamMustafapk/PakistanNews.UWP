@@ -30,7 +30,7 @@
                 <TextBlock
                     Margin="0,0,0,10"
                     Text="{x:Bind AboutThisAppModel.AboutText}"
-                    Style="{StaticResource AppDescriptionsStyle}"/>
+                    Style="{StaticResource AppDescriptionsStyle}" FontWeight="Bold"/>
                 <TextBlock HorizontalAlignment="Stretch" Width="auto"
            IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                     <Run Text="The application is provided as is "/>

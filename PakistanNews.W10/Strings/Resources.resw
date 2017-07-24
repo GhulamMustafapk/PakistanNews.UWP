@@ -151,7 +151,7 @@
     <value>Full Screen</value>
   </data>
   <data name="LastUpdated.Text" xml:space="preserve">
-    <value>This section was Last updated on</value>
+    <value>Last updated</value>
   </data>
   <data name="ListErrorNotificationControl.ErrorText" xml:space="preserve">
     <value>There was an unexpected error.</value>

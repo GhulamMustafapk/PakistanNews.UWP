@@ -17,36 +17,35 @@
                     FontSize="12"
                     Style="{StaticResource AppDescriptionsStyle}" Margin="0"/>
                 <TextBlock
-                    Style="{StaticResource AppDescriptionsStyle}" Margin="0">
+                    Style="{StaticResource AppDescriptionsStyle}" Margin="0" TextAlignment="Justify">
                     <Run x:Uid="AppVersion"/>
                     <Run Text="{x:Bind AboutThisAppModel.AppVersion}"/>
                 </TextBlock>
                 <TextBlock
                     Margin="0,0,-2,10"
-                    Style="{StaticResource AppDescriptionsStyle}">
+                    Style="{StaticResource AppDescriptionsStyle}" TextAlignment="Justify">
                     <Run x:Uid="DevelopedBy"/>
                     <Run Text="{x:Bind AboutThisAppModel.Publisher}"/>
                 </TextBlock>
                 <TextBlock
                     Margin="0,0,0,10"
                     Text="{x:Bind AboutThisAppModel.AboutText}"
-                    Style="{StaticResource AppDescriptionsStyle}" FontWeight="Bold"/>
+                    Style="{StaticResource AppDescriptionsStyle}" FontWeight="Bold" TextAlignment="Justify"/>
                 <TextBlock HorizontalAlignment="Stretch" Width="auto"
-           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+           IsTextSelectionEnabled="false" TextWrapping="Wrap" FontSize="12" FontWeight="Light" Foreground="White" ScrollViewer.VerticalScrollBarVisibility="Hidden" TextAlignment="Justify">
                     <Run Text="The application is provided as is "/>
                     <Run Text="without "/>
                     <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
                 </TextBlock>
-                <TextBlock FontWeight="Bold" Margin="0,5,0,0" TextWrapping="WrapWholeWords">My Other Apps</TextBlock>
-                <HyperlinkButton Content="Tech Trends" NavigateUri="https://www.microsoft.com/store/apps/9nblggh6j0jl" Padding="0" FontSize="12" AutomationProperties.HelpText="Tech Trends" Width="auto" ToolTipService.ToolTip="Tech Trends by Ghulam Mustafa">
+                <HyperlinkButton Content="Rate and Review" NavigateUri="ms-windows-store://pdp/?productid=9wzdncrdgr6g" Padding="0" FontSize="12" AutomationProperties.HelpText="Rate and Review" Width="auto" ToolTipService.ToolTip="Rate and Review" FontWeight="Bold" Foreground="White" Background="{x:Null}" Margin="10,19,0,0">
                     <HyperlinkButton.ContentTransitions>
                         <TransitionCollection>
                             <EdgeUIThemeTransition Edge="Right"/>
                         </TransitionCollection>
                     </HyperlinkButton.ContentTransitions>
                 </HyperlinkButton>
-                
+
             </StackPanel>
-         </ScrollViewer>
-     </Grid>    
+        </ScrollViewer>
+    </Grid>
 </Page>

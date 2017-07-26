@@ -24,7 +24,7 @@
             Style="{StaticResource WasCommandBarStyle}"
             Foreground="{StaticResource AppBarForeground}"
             Background="{StaticResource AppBarBackground}"
-            CommandBarOverflowPresenterStyle="{StaticResource WasCommandBarOverflowPresenter}"/>
+            CommandBarOverflowPresenterStyle="{StaticResource WasCommandBarOverflowPresenter}" ClosedDisplayMode="Minimal"/>
     </was_controls:ShellControl.CommandBar>
     <was_controls:ShellControl.PaneHeader>
         <was_controls:SearchBox

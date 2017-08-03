@@ -1,7 +1,6 @@
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using PakistanNews.ViewModels;
-
 namespace PakistanNews.Pages
 {
     public sealed partial class AboutPage : Page

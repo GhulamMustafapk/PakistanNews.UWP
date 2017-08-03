@@ -1,13 +1,3 @@
-//---------------------------------------------------------------------------
-//
-// <copyright file="App.xaml.cs" company="Microsoft">
-//    Copyright (C) 2015 by Microsoft Corporation.  All rights reserved.
-// </copyright>
-//
-// <createdOn>7/6/2017 5:33:38 AM</createdOn>
-//
-//---------------------------------------------------------------------------
-
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="17934GhulamMustafa.MyCountryPakistan" Publisher="CN=5B97E375-049F-4830-B350-BD6B30CCDAEA" Version="2017.7.24.0" />
+  <Identity Name="17934GhulamMustafa.MyCountryPakistan" Publisher="CN=5B97E375-049F-4830-B350-BD6B30CCDAEA" Version="2017.8.3.0" />
   <mp:PhoneIdentity PhoneProductId="96997b9a-08d1-4690-8bfb-19a95ccecf07" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Pakistan News Live</DisplayName>

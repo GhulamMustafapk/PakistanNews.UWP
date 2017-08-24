@@ -8,14 +8,14 @@
   
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     mc:Ignorable="d">
-    <Grid Background="{StaticResource AppBackground}" Opacity="0.8">
-        <ScrollViewer FontSize="12" Opacity="0.8" VerticalScrollMode="Disabled">
+    <Grid Opacity="0.9" Background="#FF054625">
+        <ScrollViewer FontSize="12" VerticalScrollMode="Disabled">
             <StackPanel Margin="24,32,24,8" Opacity="0.8">
                 <TextBlock
                     Text="{x:Bind AboutThisAppModel.AppName}"
-                    FontWeight="Light"
+                    FontWeight="Bold"
                     FontSize="12"
-                    Style="{StaticResource AppDescriptionsStyle}" Margin="0"/>
+                    Style="{StaticResource AppDescriptionsStyle}" Margin="0" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                 <TextBlock
                     Style="{StaticResource AppDescriptionsStyle}" Margin="0" TextAlignment="Justify">
                     <Run x:Uid="AppVersion"/>
@@ -37,12 +37,9 @@
                     <Run Text="without "/>
                     <Run Text="any obligations. The material displayed within the application is collected from the respective sources. The developer in no terms is responsible for the accuracy of the material and doesn't reflect developer's views. "/>
                 </TextBlock>
-                <HyperlinkButton Content="Rate and Review" NavigateUri="ms-windows-store://review/?productid=9wzdncrdgr6g" Padding="0" FontSize="12" AutomationProperties.HelpText="Rate and Review" Width="auto" ToolTipService.ToolTip="Rate and Review" FontWeight="Bold" Foreground="White" Background="{x:Null}" Margin="10,19,0,0">
-                    <HyperlinkButton.ContentTransitions>
-                        <TransitionCollection>
-                            <EdgeUIThemeTransition Edge="Right"/>
-                        </TransitionCollection>
-                    </HyperlinkButton.ContentTransitions>
+                <HyperlinkButton Content="Rate and Review Pakistan News" NavigateUri="ms-windows-store://review/?productid=9wzdncrdgr6g"  FontSize="12" AutomationProperties.HelpText="Rate and Review" Width="308" ToolTipService.ToolTip="Rate and Review" Foreground="Black" Background="White" Margin="0,20,0,0" FontWeight="Bold" Height="33" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                       
+                        
                 </HyperlinkButton>
 
             </StackPanel>

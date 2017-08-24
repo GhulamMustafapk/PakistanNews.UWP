@@ -10,9 +10,9 @@
     xmlns:layouts="using:PakistanNews.Layouts.Detail"
 	xmlns:list_layouts="using:PakistanNews.Layouts.List"
     xmlns:controls="using:PakistanNews.Layouts.Controls"
-    xmlns:triggers="using:PakistanNews.Triggers"  
-    
-	x:Name="root"
+    xmlns:triggers="using:PakistanNews.Triggers"
+    xmlns:adduplex="using:AdDuplex"
+    x:Name="root"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     d:DataContext="{d:DesignData Source=/Assets/Design/DetailDesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}"
     mc:Ignorable="d">
@@ -63,5 +63,6 @@
     
     <Grid Background="{StaticResource AppBackground}">
         <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}" />
+        <adduplex:AdControl AdUnitId="207167" AppKey="0c6cc2dc-99fa-4255-b0ce-8c183fc1de73" FontSize="10"                       VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Center" Width="auto" Height="30" RefreshInterval="30"/>
     </Grid>
 </Page>

@@ -1,0 +1,3 @@
+﻿Restoring NuGet packages...
+To prevent NuGet from restoring packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages during build.'
+1>------ Rebuild All started: Project: PakistanNews.W10, Configuration: Debug x86 ------

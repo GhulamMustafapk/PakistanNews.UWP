@@ -4,7 +4,7 @@
 
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
-			<Color x:Key="AppBackgroundColor">#000000</Color>
+            <Color x:Key="AppBackgroundColor">#FF054625</Color>
             
             <Color x:Key="SectionTitleForegroundColor">#999999</Color>
             

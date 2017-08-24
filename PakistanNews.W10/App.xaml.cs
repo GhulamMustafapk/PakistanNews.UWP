@@ -4,9 +4,9 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-
-
 using PakistanNews.Pages;
+using UniversalRateReminder;
+using Microsoft.HockeyApp;
 
 namespace PakistanNews
 {
@@ -34,7 +34,10 @@ namespace PakistanNews
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
+
         {
+          RatePopup.CheckRateReminderAsync();
+            
             AdDuplex.AdDuplexClient.Initialize("0c6cc2dc-99fa-4255-b0ce-8c183fc1de73");
             
 #if DEBUG

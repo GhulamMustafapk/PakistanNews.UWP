@@ -8,11 +8,12 @@
     xmlns:was_controls="using:AppStudio.Uwp.Controls"
     xmlns:vm="using:PakistanNews.ViewModels"
     xmlns:layouts="using:PakistanNews.Layouts.Detail"
+    xmlns:adduplex="using:AdDuplex"
     x:Name="root"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     d:DataContext="{d:DesignData Source=/Assets/Design/DetailDesignData.json, Type=vm:DesignViewModel, IsDesignTimeCreatable=true}"
     mc:Ignorable="d">
-	<was_controls:ShellControl.CommandBar>
+    <was_controls:ShellControl.CommandBar>
         <was_actions:ActionsCommandBar
             x:Name="commandBar"
             ActionsSource="{Binding SelectedItem.Actions}"
@@ -29,7 +30,7 @@
                     Command="{Binding Source={StaticResource ActionCommands}, Path=Share}"
                     Foreground="{StaticResource AppBarForeground}"
                     Style="{StaticResource WasAppBarButtonStyle}"/>
-             
+
                 <AppBarButton
                     x:Uid="SmallTextButton"
                     Command="{Binding ApplyFontSizeCommand}"
@@ -54,9 +55,9 @@
             </was_actions:ActionsCommandBar.SecondaryCommands>
         </was_actions:ActionsCommandBar>
     </was_controls:ShellControl.CommandBar>
-    
+
     <Grid Background="{StaticResource AppBackground}">
         <layouts:TextDetailLayout ViewModel="{x:Bind ViewModel}" />
+        <adduplex:AdControl AdUnitId="207167" AppKey="0c6cc2dc-99fa-4255-b0ce-8c183fc1de73" FontSize="10"                       VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="110" Height="22" RefreshInterval="30"/>
     </Grid>
-    
 </Page>

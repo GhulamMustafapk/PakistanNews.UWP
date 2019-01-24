@@ -443,7 +443,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PakistanNews.W10_StoreKey.pfx" />
     <None Include="Service References\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
@@ -557,7 +556,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\RelatedContentVBP.json" />
-    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\ApplicationLogo.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
